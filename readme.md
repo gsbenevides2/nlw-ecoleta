@@ -9,3 +9,8 @@ O Ecoleta é uma plataforma onde coletores de material para reciclagem podem enc
 
 ## Contribuições
 Como esse repositório é para meu próprio aprendizado, pull requests podem não ser aceitas, mas se você quiser contribuir com uma idéia ou sugestão e só abrir uma issue.
+
+Um forte abraço e até a próxima 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjAyOTkwNTc0NF19
+-->
