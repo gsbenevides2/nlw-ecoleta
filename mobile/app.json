@@ -1,28 +1,36 @@
 {
-  "expo": {
-    "name": "mobile",
-    "slug": "mobile",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
-  }
+ "expo": {
+	"name": "Ecoleta",
+	"slug": "ecoleta",
+	"platforms": [
+	 "ios",
+	 "android"
+	],
+	"primaryColor":"#f0f0f5",
+	"version": "1.0.0",
+	"orientation": "portrait",
+	"icon": "./assets/icon.png",
+	"splash": {
+	 "image": "./assets/splash.png",
+	 "resizeMode": "contain",
+	 "backgroundColor": "#f0f0f5"
+	},
+	"updates": {
+	 "fallbackToCacheTimeout": 0
+	},
+	"assetBundlePatterns": [
+	 "**/*"
+	],
+	"ios": {
+	 "supportsTablet": true
+	},
+	"androidStatusBar":{
+	 "barStyle": "dark-content",
+	 "backgroundColor": "#f0f0f5"
+	},
+	"androidNavigationBar": {
+	 "barStyle": "dark-content",
+	 "backgroundColor": "#f0f0f5"
+	}
+ }
 }

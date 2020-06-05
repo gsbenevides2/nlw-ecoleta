@@ -41,7 +41,7 @@ export default StyleSheet.create({
 
   mapMarkerContainer: {
     width: 90,
-    height: 70,
+    minHeight: 70,
     backgroundColor: '#34CB79',
     flexDirection: 'column',
     borderRadius: 8,
@@ -54,13 +54,12 @@ export default StyleSheet.create({
     height: 45,
     resizeMode: 'cover',
   },
-
   mapMarkerTitle: {
     flex: 1,
     fontFamily: 'Roboto_400Regular',
     color: '#FFF',
     fontSize: 13,
-    lineHeight: 23,
+	  textAlign:'center',
   },
 
   itemsContainer: {

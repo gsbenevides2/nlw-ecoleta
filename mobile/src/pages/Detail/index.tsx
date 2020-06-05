@@ -21,6 +21,7 @@ interface Data {
 	whatsapp: string;
 	city: string;
 	uf: string;
+	image_url:string;
  };
  items: {
 	title: string;
@@ -69,23 +70,23 @@ const Detail = ()=>{
 		</TouchableOpacity>
 
 		<Image
-	style={styles.pointImage}
-	source={{
-	 uri: 'https://picsum.photos/300/200'
-	}}
-	/>
+		 style={styles.pointImage}
+		 source={{
+			uri: data.point.image_url
+		 }}
+		/>
 
- <Text style={styles.pointName}>{data.point.name}</Text>
- <Text style={styles.pointItems}>
-	{data.items.map((item) => item.title).join(", ")}
- </Text>
+	 <Text style={styles.pointName}>{data.point.name}</Text>
+	 <Text style={styles.pointItems}>
+		{data.items.map((item) => item.title).join(", ")}
+	 </Text>
 
- <View style={styles.address}>
-	<Text style={styles.addressTitle}>Endereço</Text>
-	<Text style={styles.addressContent}>
-	{data.point.city}, {data.point.uf}
- </Text>
-</View>
+	 <View style={styles.address}>
+		<Text style={styles.addressTitle}>Endereço</Text>
+		<Text style={styles.addressContent}>
+		 {data.point.city}, {data.point.uf}
+		</Text>
+	 </View>
 	</View>
 	<View style={styles.footer}>
 	 <RectButton style={styles.button} onPress={handleWhatsApp}>

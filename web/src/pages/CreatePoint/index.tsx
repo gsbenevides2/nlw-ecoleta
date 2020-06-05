@@ -9,7 +9,7 @@ import './styles.css'
 import api from '../../services/api'
 import places from '../../services/places'
 import {LeafletMouseEvent} from 'leaflet'
-
+import Dropzone from '../../components/Dropzone'
 import Success from '../../components/Success'
 
 interface Item {
@@ -24,6 +24,7 @@ interface IBGECityResponse {
  nome:string
 }
 const CreatePoint = ()=>{
+ const [selectedFile,setSelectedFile] = React.useState<File>()
  const [success,setSuccess] = React.useState(false)
  const [inputsData, setInputsData] = React.useState({
 	name:'',
@@ -109,10 +110,17 @@ const CreatePoint = ()=>{
 	const uf = selectedUf
 	const city = selectedCity
 	const items = selectedItems
-	const data = {
-	 name,email,whatsapp,
-	 latitude,longitude,uf,city,
-	 items
+	const data = new FormData()
+	data.append('name',name)
+	data.append('email',email)
+	data.append('whatsapp',whatsapp)
+	data.append('latitude',String(latitude))
+	data.append('longitude',String(longitude))
+	data.append('uf',uf)
+	data.append('city',city)
+	data.append('items',items.join(','))
+	if(selectedFile){
+	 data.append('image',selectedFile)
 	}
 	api.post('points',data)
 	 .then(()=>{
@@ -134,6 +142,7 @@ const CreatePoint = ()=>{
 		</header>
 		<form onSubmit={handleSubmit}>
 		 <h1>Cadastro do<br/>Ponto de Coleta</h1>
+<Dropzone onFileUploaded={setSelectedFile} />
 
 		 <fieldset>
 			<legend>
